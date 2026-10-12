@@ -67,7 +67,6 @@ print(motorcycles)
 motorcycles.insert(2, 'ducati') #Con .insert(), primero ponemos la posición y después lo que queremos insertar
 print(motorcycles)
 
-
 # Método del para borrar
 del motorcycles[0] #Para borrar elementos se pone del delante del nombre de la lista y entre corchetes la posición
 print(motorcycles)
@@ -140,7 +139,7 @@ print(f"Me gustaría invitar a cenar a mi gran amigo / hermano {invitarCena[2]}"
 invitarCena.insert(0, 'vergara')
 invitarCena.insert(2, 'albujer')
 invitarCena.append('beni')
-print(invitarCena)
+print(len(invitarCena))
 
 for i in invitarCena:
     print(f'{i} me gustaría invitarte a cenar al Titas.')
@@ -173,3 +172,91 @@ for i in invitarCena:
     
 del invitarCena[:]
 print(invitarCena)
+
+# ORDENAR LISTAS método sort()
+
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+cars.sort() #Las ordena alfabéticamente, y ya no pueden volver a su forma original
+print(cars)
+
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+cars.sort(reverse=True) # De esta forma lo ordena de manera descendente
+print(cars)
+
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+print("Here is the original list:")
+print(cars)
+
+print("\nHere is the sorted list:")
+print(sorted(cars)) # Las ordena temporalmente
+
+print("\nHere es the original list again:")
+print(cars)
+
+cars.reverse() #No genera un orden alfabético inverso, sino que le da la vuelta a la lista.Este cambio es permanente hasta que le aplicas otra vez reverse
+print(cars)
+
+# DESCUBRIR LA LONGITUD DE UNA LISTA len()
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+print(len(cars))
+
+## EJERCICIOS ##
+# 1. VER EL MUNDO: Piense en al menos cinco lugares del mundo que le gustaría visitar. 
+#   -Guarde esos lugares en una lista. Asegúrese de no hacerlo en orden alfabético.
+sitioPorVisitar = ["japón", "new york", "maldivas", "thailandia", "bangok"]
+#   -Imprima la lista en su orden original. No se preocupe por el formato, simplemente imprímala como una lista de Python en bruto
+print(sitioPorVisitar)
+
+#   -Use sorted() para imprimir la lista en orden alfabético sin modificarla realmente
+print(sorted(sitioPorVisitar)) 
+
+#   -Compruebe que la lista sigue en su orden original imprimiendola
+print(sitioPorVisitar)
+
+#   -Use sorted() para imprimir la lista en orden alfabético inverso sin cambiar el orden de la lista original
+print(sorted(sitioPorVisitar, reverse=True))
+
+#   -Compruebe que la lista sigue en su orden original imprimiéndola otra vez
+print(sitioPorVisitar)
+
+#   -Use reverse() para cambiar el orden de la lista. Imprímala para comprobar que el orden ha cambiado
+sitioPorVisitar.reverse()
+print(sitioPorVisitar)
+
+#   -Use reverse() para cambiar el orden de la lista de nuevo. Imprímala para comprobar que ha vuelto al orden original
+sitioPorVisitar.reverse()
+print(sitioPorVisitar)
+
+#   -Use sort() para cambiar la lista y guardarla en orden alfabético. Imprímala para comprobar que el orden ha cambiado
+sitioPorVisitar.sort()
+print(sitioPorVisitar)
+#   -Use sort() para cambiar la lista y guardarla en orden alfabético inverso. Imprímala para comprobar que el orden ha cambiado
+sitioPorVisitar.sort(reverse=True)
+print(sitioPorVisitar)
+
+# 2. INVITADOS A LA CENA: utilice len() para imprimir un mensaje indicando el número de personas que va a invitar a la cena
+
+invitados = ['javi', 'raul', 'aritz', 'paco', 'jose', 'patrick', 'beni', 'primi']
+print("Vienen ", len(invitados), "invitados a mi cena.")
+
+# 3. TODAS LAS FUNCIONES: Piense en algo que podría guardar en una lista. Por ejemplo, podría hacer una lista de manotañas, ríos, países, ciudades, idiomas o cualquier otra cosa. Escriba un programa que cree una lista que contenga estos elementos y use cada función presentada en este capítulo al menos una vez
+
+idiomas = ['inglés', 'francés', 'alemán', 'ruso', 'chino']
+
+print(idiomas)
+print(sorted(idiomas))
+print(idiomas)
+idiomas.reverse()
+print(idiomas)
+idiomas.reverse()
+print(idiomas)
+idiomas.sort()
+print(idiomas)
+idiomas.sort(reverse=True)
+print(idiomas)
+
+## EVITAR ERRORES ##
+
+cars = ['bmw', 'audi', 'toyota']
+
+print(cars[-1])
